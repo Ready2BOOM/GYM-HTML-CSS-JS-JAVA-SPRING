@@ -12,5 +12,5 @@ o	Серверное приложение: Java
 o	Фреймворки и библиотеки: Bootstrap.min.js + jQuery / Spring Boot + Hibernate + Logback
 o	REST API : Spring Boot  
 o	База данных: MySQL. Взаимодействие через Hibernate
-o	Логирование: Библиотека Logback
+o	Логирование: Библиотека Logback  
 o	Сборка и управление зависимостями: Apache Maven  
