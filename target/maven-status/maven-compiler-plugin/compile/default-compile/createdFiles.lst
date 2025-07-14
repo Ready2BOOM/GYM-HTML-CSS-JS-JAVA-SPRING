@@ -1,0 +1,15 @@
+com\example\model\Order.class
+com\example\repository\GroupClassRepository.class
+com\example\controller\SubscriptionController.class
+com\example\model\User.class
+com\example\controller\AuthController.class
+com\example\Application.class
+com\example\model\GroupClass.class
+com\example\controller\OrderController.class
+com\example\model\Subscription.class
+com\example\controller\GroupClassController.class
+com\example\aspect\LoggingAspect.class
+com\example\repository\OrderRepository.class
+com\example\repository\SubscriptionRepository.class
+com\example\repository\UserRepository.class
+com\example\config\MultipleServersConfig.class

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Профиль пользователя</title>
+	<link rel="stylesheet" href="css/profile.css">
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+</head>
+
+<body>
+	<div class="section subscription-info">
+		<h2>Информация об абонементе</h2>
+		<div id="subscription-details">
+			<p>Статус: <span id="status"></span></p>
+			<p>Дата окончания: <span id="end-date"></span></p>
+			<button onclick="freezeSubscription()" id="freeze-button">Заморозить абонемент</button>
+		</div>
+	</div>
+
+	<div class="section group-classes">
+		<h2>Групповые занятия</h2>
+		<div id="classes-list" class="horizontal-scroll"></div>
+	</div>
+
+	<div class="section supplements">
+		<h2>Спортивные добавки</h2>
+		<div id="supplements-grid" class="supplements-grid">
+			<div class="supplement-card" onclick="addToCart('Протеин', 2000)">
+				<img src="images/protein.jpg" alt="Протеин">
+				<p>Протеин</p>
+				<p>2500 ₽</p>
+			</div>
+			<div class="supplement-card" onclick="addToCart('Креатин', 1500)">
+				<img src="images/creatine.jpg" alt="Креатин">
+				<p>Креатин</p>
+				<p>1200 ₽</p>
+			</div>
+			<div class="supplement-card" onclick="addToCart('BCAA', 1500)">
+				<img src="images/bcaa.jpg" alt="BCAA">
+				<p>BCAA</p>
+				<p>1500 ₽</p>
+			</div>
+			<div class="supplement-card" onclick="addToCart('Гейнер', 1500)">
+				<img src="images/gainer.jpg" alt="Гейнер">
+				<p>Гейнер</p>
+				<p>2000 ₽</p>
+			</div>
+			<div class="supplement-card" onclick="addToCart('ZMA', 1500)">
+				<img src="images/zma.jpg" alt="ZMA">
+				<p>ZMA</p>
+				<p>1100 ₽</p>
+			</div>
+			<div class="supplement-card" onclick="addToCart('Витамины', 1500)">
+				<img src="images/vitamines.jpg" alt="Витамины">
+				<p>Витамины</p>
+				<p>800 ₽</p>
+			</div>
+		</div>
+		<div id="cart">
+			<h3>Корзина</h3>
+			<div id="cart-items"></div>
+			<p>Итого: <span id="cart-total">0</span> ₽</p>
+			<button onclick="placeOrder()">Оформить заказ</button>
+		</div>
+	</div>
+
+	<script src="js/profile.js"></script>
+</body>
+
+</html>

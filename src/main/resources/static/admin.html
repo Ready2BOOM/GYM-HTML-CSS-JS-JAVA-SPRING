@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель администратора</title>
+	<link rel="stylesheet" href="css/profile.css">
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+</head>
+
+<body>
+	<div class="section subscription-creation">
+		<h2>Создание абонемента</h2>
+		<form id="subscription-form">
+			<div class="form-group">
+				<label>Срок действия абонемента:</label>
+				<input type="range" id="months" min="1" max="12" step="1" value="1">
+				<span id="months-value">1 месяц</span>
+			</div>
+
+			<div class="form-group">
+				<label>Количество занятий с тренером:</label>
+				<input type="range" id="trainer-sessions" min="0" max="15" step="1" value="0">
+				<span id="sessions-value">0 занятий</span>
+			</div>
+
+			<div class="options-group">
+				<div class="option">
+					<label>
+						<input type="radio" name="visits" value="limited"> До 100 посещений
+					</label>
+					<label>
+						<input type="radio" name="visits" value="unlimited"> Безлимит
+					</label>
+				</div>
+
+				<div class="option">
+					<label>
+						<input type="radio" name="time" value="morning"> Только утром
+					</label>
+					<label>
+						<input type="radio" name="time" value="full"> Весь день
+					</label>
+				</div>
+
+				<div class="option">
+					<label>
+						<input type="radio" name="freeze" value="no"> Без заморозки
+					</label>
+					<label>
+						<input type="radio" name="freeze" value="yes"> С заморозкой
+					</label>
+				</div>
+
+				<div class="option">
+					<label>
+						<input type="radio" name="pool" value="no"> Только зал
+					</label>
+					<label>
+						<input type="radio" name="pool" value="yes"> Зал + бассейн
+					</label>
+				</div>
+			</div>
+
+			<div class="total-price">
+				<h3>Общая стоимость: <span id="total-price">1500</span> ₽</h3>
+			</div>
+
+			<div class="client-info">
+				<input type="text" id="first-name" placeholder="Имя" required>
+				<input type="text" id="last-name" placeholder="Фамилия" required>
+				<input type="text" id="login" placeholder="Логин" required>
+				<input type="tel" id="phone" placeholder="Телефон" required>
+				<input type="date" id="start-date" required>
+			</div>
+
+			<button type="submit">Оформить абонемент</button>
+		</form>
+	</div>
+
+	<div class="section class-creation">
+		<h2>Создание группового занятия</h2>
+		<form id="class-form">
+			<input type="date" id="class-date" required>
+			<div class="radio-group">
+				<label><input type="radio" name="class-type" value="Йога" required> Йога</label>
+				<label><input type="radio" name="class-type" value="Кроссфит"> Кроссфит</label>
+				<label><input type="radio" name="class-type" value="Пилатес"> Пилатес</label>
+				<label><input type="radio" name="class-type" value="Бокс"> Бокс</label>
+				<label><input type="radio" name="class-type" value="Стретчинг"> Стретчинг</label>
+				<label><input type="radio" name="class-type" value="Зумба"> Зумба</label>
+			</div>
+			<button type="submit">Опубликовать занятие</button>
+		</form>
+	</div>
+
+	<script src="js/admin.js"></script>
+</body>
+
+</html>
